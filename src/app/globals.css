@@ -1,16 +1,41 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-8xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+
+}
+
+
+
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #131618;
+  --blackshade : #3a3d3f;
+  --blackshade3 : #66696c;
+  --blackshade4 : #95989b
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #131618;
     --foreground: #ededed;
+    --blackshade : #3a3d3f;
+    --blackshade3 : #66696c;
+    --blackshade4 : #95989b
   }
 }
 
@@ -19,3 +44,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.text-stroke-3 {
+  background-image:  linear-gradient(45deg, #ffbcd7, #efff8a);
+  /* background-image:  linear-gradient(45deg, #ff2a83, #cde052); */
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+
+}
+
+
+/* pink #ff2a83 */
+/* yellow #cde052 */
