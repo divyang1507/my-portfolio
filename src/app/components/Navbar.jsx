@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
       <nav className=" py-6 fixed w-screen top-0  z-50 flex items-center justify-between" ref={ref}>
-        <div className=" z-10 w-full mx-4 md:mx-[120px] justify-between flex items-center">
+        <div className=" z-10 w-full mx-4 md:mx-[60px] lg:mx-[120px] justify-between flex items-center">
           <div className="z-10 text-3xl font-medium" onClick={()=>{setIsOpen(false)}}>kindev</div>
           <div className="z-10 text-4xl relative cursor-pointer overflow-hidden" onClick={handleinput}>
             <div

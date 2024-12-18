@@ -1,5 +1,5 @@
 "use client";
-import  { useRef } from "react";
+import { useRef } from "react";
 import Button from "./Button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -10,10 +10,10 @@ const HeroSection = () => {
   gsap.registerPlugin(useGSAP);
   useGSAP(
     () => {
-      gsap.set("h1, h3, .button  , p", {
+      gsap.set(".button  , .text", {
         y: -150,
       });
-      gsap.to("h1, h3, .button  , p", {
+      gsap.to(".button  , .text", {
         y: 0,
         duration: 0.5,
         stagger: 0.3,
@@ -25,41 +25,41 @@ const HeroSection = () => {
   );
   return (
     <>
-      <section
-        className=" mx-4 md:mx-[120px] relative h-screen flex md:flex-row flex-col justify-between items-center gap-8"
-        ref={ref}>
-        <div className="clipLink flex-1">
+      <section className=" relative h-screen mx-4 md:mx-16 lg:mx-[120px] flex justify-start items-center">
+        <div className="clipLink  z-20 relative md:w-1/2" ref={ref}>
           <div className="clipLink">
-            <h1 className="text-6xl md:text-8xl">Web Design & </h1>
-          </div>
-          <div className="clipLink">
-            <h1 className="text-6xl md:text-8xl">Development</h1>
-          </div>
-          <div className="clipLink">
-            <h3 className="pt-7  text-2xl md:text-3xl font-extralight">
-              Web Desinger, UI/UX Desinger, Frontend Developer & Framer Webflow
-              Expert
-            </h3>
+            <div className="text text-5xl  md:text-[4rem] lg:text-7xl text-center md:text-left ">
+              Web Design &{" "}
+            </div>
           </div>
           <div className="clipLink ">
-            <div className=" button">
+            <div className="text text-5xl md:text-[4rem] lg:text-7xl text-center md:text-left">
+              Development
+            </div>
+          </div>
+          <div className="clipLink">
+            <div className="text pt-7  text-[1.5rem] md:text-[2vw] font-extralight text-center md:text-left">
+              Web Desinger, UI/UX Desinger, Frontend Developer & Framer Webflow
+              Expert
+            </div>
+          </div>
+          <div className="clipLink ">
+            <div className=" button lg:w-[35%]">
               <Button button="Contact us" className="" />
             </div>
           </div>
         </div>
-
-        <div className="flex-1 blur-vignette">
+        <div className="absolute top-10">
           <HeroModel />
+          <div className="absolute w-[150px] h-[50px] bottom-[40px] right-0 z-[100] bg-[#0A0A0F]"></div>
         </div>
       </section>
-      <section className="mx-4 md:mx-[120px] pt-6 px-2 flex justify-between items-center ">
-        <h4 className="text-center text-2xl w-full md:w-1/3 mx-auto">
+      <section className="mx-4 md:mx-[60px] lg:mx-[120px] mt-14 pt-6 px-2 flex justify-between items-center ">
+        <h4 className="text-center text-2xl mx-auto">
           Welcome to KinDev, Web Designer & Dev Duo doing Web Development and
           expert in Webflow Framer and Figma
         </h4>
       </section>
-
-    
     </>
   );
 };
