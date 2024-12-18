@@ -27,8 +27,8 @@ const Reviews = () => {
   ];
   return (
     <>
-      <h2 className="text-8xl pt-24 ">Some nice words from my past Clients</h2>
-      <section className=" w-[90%] mx-auto grid grid-cols-3 gap-24">
+      <h1 className="text-6xl md:text-8xl  mt-36 py-24 ">Some nice words from my past Clients</h1>
+      <section className=" mx-4 md:mx-[120px] flex flex-wrap gap-4 ">
         {reviews.map((e, id) => {
           return (
             <div key={id} className="">

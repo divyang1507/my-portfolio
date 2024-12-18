@@ -13,47 +13,62 @@
   h4 {
     @apply text-2xl;
   }
-
 }
-
-
 
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  overflow-x: hidden;
   --background: #ffffff;
   --foreground: #131618;
-  --blackshade : #3a3d3f;
-  --blackshade3 : #66696c;
-  --blackshade4 : #95989b
+  --blackshade: #3a3d3f;
+  --blackshade3: #66696c;
+  --blackshade4: #95989b;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #131618;
     --foreground: #ededed;
-    --blackshade : #3a3d3f;
-    --blackshade3 : #66696c;
-    --blackshade4 : #95989b
+    --blackshade: #26282a;
+    --blackshade2: #3a3d3f;
+    --blackshade3: #66696c;
+    --blackshade4: #95989b;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(244 244 245);
+  background: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .text-stroke-3 {
-  background-image:  linear-gradient(45deg, #ffbcd7, #efff8a);
+  background-image: linear-gradient(45deg, #ffbcd7, #efff8a);
   /* background-image:  linear-gradient(45deg, #ff2a83, #cde052); */
   -webkit-background-clip: text;
   -webkit-text-stroke: 3px transparent;
+}
 
+.clip {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.clipLink {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.glowlight {
+  background: radial-gradient(#ff1c7e8f, rgba(255, 255, 255, 0));
+  /* background: radial-gradient(#ffffff8f, rgba(255, 255, 255, 0)); */
 }
 
 
+
+
+
+  
+
+/* purple : 883FE0 */
 /* pink #ff2a83 */
 /* yellow #cde052 */

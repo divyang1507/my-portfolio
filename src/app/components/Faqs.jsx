@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion from "./Accordion";
 import Marquee from "./Marquee";
 const Faqs = () => {
@@ -26,8 +25,11 @@ const Faqs = () => {
   ];
   return (
     <>
-      <Marquee marqueeName="FAQs" />
-      <section className="w-[90%] mx-auto">
+      <div className="mt-36 overflow-hidden">
+        {" "}
+        <Marquee marqueeName="FAQs" />
+      </div>
+      <section className="mx-4 md:mx-[120px]">
         {FAQS.map((e, id) => {
           return (
             <div key={id}>

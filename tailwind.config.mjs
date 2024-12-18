@@ -1,3 +1,5 @@
+import { Graduate } from "next/font/google";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -11,16 +13,19 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         blackshade: "var(--blackshade)",
+        blackshade2: "var(--blackshade2)",
         blackshade3: "var(--blackshade3)",
         blackshade4: "var(--blackshade4)",
+        primarypink: "#ff2a83",
+        primaryyellow: "#cde052",
       },
       keyframes: {
         scroll: {
           from: {
-            transform: 'translateX(0)',
+            transform: "translateX(0)",
           },
           to: {
-            transform: 'translateX(calc(-100% - 1rem))',
+            transform: "translateX(calc(-100% - 1rem))",
           },
         },
       },
@@ -28,10 +33,12 @@ export default {
         scroll: "scroll 10s linear infinite",
         scrollslow: "scroll 15s linear infinite",
       },
-
-
+      backgroundImage: {
+        // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(closest-side, #ff2a83, #00000000);",
+      },
     },
   },
-  
+
   plugins: [],
 };
