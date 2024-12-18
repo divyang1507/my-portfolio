@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Button = ({ button }) => {
   return (
     <>
-      <button className="py-3 w-full group mt-12 relative rounded-md px-8 bg-transparent  font-semibold border-zinc-200 border-2 transition-all duration-200">
+      <button className="py-3 group relative rounded-md px-8 bg-transparent  font-semibold border-zinc-200 border-2 transition-all duration-200">
         <div className="absolute h-0 bg-gradient-to-r bottom-0 group-hover:h-full left-0 right-0 transition-all duration-200 -z-10"></div>
         <div className="flex text-lg items-center justify-center  gap-4 text-zinc-200 group-hover:text-zinc-800 z-10 transition-all duration-200 ">
           {button}{" "}
