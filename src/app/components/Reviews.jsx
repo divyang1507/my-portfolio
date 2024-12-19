@@ -1,6 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import { FaRegStar, FaStarHalfStroke, FaStar } from "react-icons/fa6";
-
+import { FaUser } from "react-icons/fa";
 const Reviews = () => {
   const reviews = [
     {
@@ -9,39 +10,50 @@ const Reviews = () => {
         "Thanks to this project we discovered and realised our brand was so much more than what we thought. We're extremely happy about the results",
       name: "Sumit Yadav",
       post: "CMO",
+      image: "",
     },
     {
       stars: 4,
       review:
-        "Thanks to this project we discovered and realised our brand was so much more than what we thought. We're extremely happy about the results",
-      name: "Sumit Yadav",
+        "It seems like a trivial thing for us now, but thanks to the project we have realised that all design choices must have a strategic basis",
+      name: "Manan Desai",
       post: "CMO",
+      image: "",
     },
     {
       stars: 4,
       review:
-        "Thanks to this project we discovered and realised our brand was so much more than what we thought. We're extremely happy about the results",
-      name: "Sumit Yadav",
-      post: "CMO",
+        "Not only the project inspired us about our brand, but the actual results we were able to accomplish were amazing.",
+      name: "HeyTech.co",
+      post: "company",
+      image: "",
     },
   ];
   return (
     <>
-      <h1 className="text-6xl md:text-8xl  mt-36 py-24 ">Some nice words from my past Clients</h1>
-      <section className=" mx-4 md:mx-[120px] flex flex-wrap gap-4 ">
+      <h1 className="text-4xl md:text-6xl text-center mt-36 py-24 ">
+       Reviews {/* Some nice words from my past Clients */}
+      </h1>
+      <section className=" mx-4  md:mx-16 lg:mx-[120px] items-stretch grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {reviews.map((e, id) => {
           return (
-            <div key={id} className="">
-              <div className="py-4  flex text-lg">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
+            <div
+              key={id}
+              className="p-8 flex justify-between flex-col border-zinc-400 border-2 rounded-xl bg-gradient-to-b  from-[#212129] to-[#111115]">
+              <div>
+                <div className="flex text-lg">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+                </div>
+                <div className="pt-4">{e.review}</div>
               </div>
-              <div className="pt-4">{e.review}</div>
-              <div className="py-12 flex items-center">
-                <div className="w-[50px] h-[50px]">avtar</div>
+              <div className="pt-6 flex items-center gap-4">
+                <div className="w-[50px] h-[50px] flex items-center justify-center text-4xl">
+                  {e.image ? <Image scr={""} /> : <FaUser />}
+                </div>
                 <div>
                   <p className="">{e.name}</p>
                   <p className="text-sm">{e.post}</p>

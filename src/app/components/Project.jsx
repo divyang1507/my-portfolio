@@ -76,12 +76,12 @@ const Project = ({ name, type, link, image, tool }) => {
           left: "0%", // Initially center it on the card
           transform: "translate(-50%, -50%)", // Ensure it's centered
         }}></div>
-      <div className={`bg-zinc-800 hover:bg-zinc-700 p-8 rounded-xl flex-1 border-zinc-400 border-[1px]`}>
-        <div className="w-full h-[320px] object-fill overflow-hidden rounded-lg ">
+      <div className={`bg-gradient-to-b  from-[#212129] to-[#111115]  zinc-800 hover:bg-[#2b2b34] zinc-700 p-8 rounded-xl flex-1 border-zinc-400 border-[1px]`}>
+        <div className="w-auto h-auto object-fill overflow-hidden rounded-lg ">
         <Image src={image} alt='portfolioimage ' className="rounded-lg  grayscale  group-hover:grayscale-0 transition-all duration-500 group-hover:scale-[1.1]"/>
         </div>
         <div>
-          <div className="flex items-center justify-between pt-4 ">
+          <div className="flex flex-wrap items-center justify-between pt-4 ">
             <h4>{name}</h4>
             <div className="border-blackshade4 text-sm font-extrathin bg-blackshade3 border-[1px] px-1 py-[0.5px] rounded-sm">
               {type}

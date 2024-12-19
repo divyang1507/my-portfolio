@@ -25,9 +25,9 @@ const Faqs = () => {
   ];
   return (
     <>
-      <div className="mt-36 overflow-hidden">
-        {" "}
-        <Marquee marqueeName="FAQs" />
+      <div className="mt-36 mb-6 overflow-hidden">
+        {" "}<div className="text-4xl md:text-5xl lg:text-6xl text-center"> FAQs</div>
+        {/* <Marquee marqueeName="FAQs" /> */}
       </div>
       <section className="mx-4 md:mx-[120px]">
         {FAQS.map((e, id) => {

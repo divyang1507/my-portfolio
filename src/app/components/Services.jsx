@@ -9,17 +9,17 @@ import Button from "./Button";
 const Services = () => {
   return (
     <>
-    <div className="mt-36 overflow-hidden">
-    <Marquee marqueeName={"Services"} />
+    <div className="mt-36 mb-8 overflow-hidden">
+    {/* <Marquee marqueeName={"Services"} /> */} <div className="text-4xl md:text-5xl lg:text-6xl text-center"> Services</div>
     </div>
       <section className="mx-4 md:mx-[120px]">
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-4 overflow-hidden ">
-          <div className="serviceCard col-span-auto md:col-span-2 border-[1px] border-zinc-500  bg-zinc-800 p-8  gap-4 rounded-3xl ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 overflow-hidden ">
+          <div className="serviceCard col-span-auto md:col-span-2 border-[1px] border-zinc-500  bg-gradient-to-b  from-[#212129] to-[#111115] p-8  gap-4 rounded-3xl ">
             <div className="text-3xl pb-8">
-              UI/UX & Website Design + Prototyping
+              UI/UX Design + Prototyping
             </div>
             <div className="flex gap-6 flex-col md:flex-row w-full">
-              <div className="max-w-[450px]">
+              <div className=" md:w-[50%] lg:max-w-[450px]">
                 <Image className="rounded-2xl" src={uiux} alt='image'/>
               </div>
               <div className="flex-[1] text-zinc-200">
@@ -36,8 +36,8 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-zinc-800 p-8 flex flex-col gap-4 rounded-3xl">
-            <div className="text-3xl pb-2">Full website Devlopment</div>
+          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-gradient-to-b  from-[#212129] to-[#111115] p-8 flex flex-col gap-4 rounded-3xl">
+            <div className="text-3xl pb-2">Frontend Web Devlopment</div>
             <div className="text-zinc-200">
               Let's translate your design to reality Developing . Fast,
               scalable, and pixel perfect.
@@ -46,7 +46,7 @@ const Services = () => {
               <Image className="rounded-2xl" src={coding} alt='image'/>
             </div>
           </div>
-          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-zinc-800 p-8 flex flex-col gap-4 rounded-3xl">
+          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-gradient-to-b  from-[#212129] to-[#111115] p-8 flex flex-col gap-4 rounded-3xl">
             <div className="text-3xl pb-2">Figma-to-Webflow & Framer</div>
             <div className="text-zinc-200">
               Convert your design to reality using Framer and Webflow like
@@ -56,7 +56,7 @@ const Services = () => {
               <Image className="rounded-2xl" src={figmaframer} alt='image'/>
             </div>
           </div>
-          <div className="serviceCard justify-between col-span-1 border-[1px] border-zinc-500 bg-zinc-800 p-8 flex flex-col gap-4 rounded-3xl">
+          <div className="serviceCard justify-between col-span-1 border-[1px] border-zinc-500 bg-gradient-to-b  from-[#212129] to-[#111115] p-8 flex flex-col gap-4 rounded-3xl">
             <div className="text-3xl pb-2 ">On-going support</div>
             <div className="text-zinc-200">
               Unlimited Design &/or Webflow requests, delivered one at a time.
@@ -72,7 +72,7 @@ const Services = () => {
               <Button button='Contact us' className='w-full'/>
             </div>
           </div>
-          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-zinc-800 p-8 flex flex-col gap-4 rounded-3xl">
+          <div className="serviceCard col-span-1 border-[1px] border-zinc-500 bg-gradient-to-b  from-[#212129] to-[#111115] p-8 flex flex-col gap-4 rounded-3xl">
             <div className="text-3xl pb-2">Custom project</div>
             <div className="text-zinc-200">
               We have extensive branding capabilities within my collaborators.
