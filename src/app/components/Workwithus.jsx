@@ -30,38 +30,37 @@ const Workwithus = () => {
         "We value transparency and efficiency. Our clear communication and streamlined processes ensure timely delivery, while our flexible pricing reflects the scope and complexity of your project, delivering great value within your budget.",
     },
   ];
-  // gsap.registerPlugin(ScrollTrigger);
-  // useGSAP(() => {
-  //   gsap.to(heading.current, {
-  //     scrollTrigger: {
-  //       trigger: heading.current,
-  //       pin: true,
-  //       start: "top center",
-  //       end: "center top",
-  //       // markers: true,
-  //     },
-  //   });
-  // });
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.to(heading.current, {
+      scrollTrigger: {
+        trigger: heading.current,
+        pin: true,
+        start: "top center",
+        end: "center top",
+        // markers: true,
+      },
+    });
+  });
 
   return (
     <>
-      {/* sticky top-[500px] w-[40%] */}
       <div className=" relative mt-36 mb-8 mx-4 md:mx-16 lg:mx-[120px] flex gap-16 flex-col md:flex-row">
         <div className=" sticky top-[10%] md:top-[25%] h-full ">
-          <div className="text-4xl w-3/4 md:text-6xl lg:text-7xl">
+          <div className="text-4xl md:w-3/4 md:text-6xl lg:text-7xl">
             Why Work with us
           </div>
         </div>
-        <div className=" md:w-[60%] bg-neutral800 rounded-3xl overflow-hidden">
+        <div className=" md:w-[60%] lg:bg-neutral800 rounded-3xl overflow-clip">
           {data.map((e, id) => {
             return (
               <div
                 key={id}
-                className="p-8 sticky top-[15%] md:static bg-neutral800">
-                <div className="flex flex-col md:flex-row text-4xl pt-10 gap-6 ">
+                className="p-8 sticky top-[20%] md:static rounded-3xl md:rounded-none bg-neutral800">
+                <div className="flex flex-col md:flex-row text-4xl gap-6 ">
                   <div className="text-6xl">{id + 1}.</div>
                   <div>
-                    <div className="border-b border-neutral200 pb-4">
+                    <div className="border-b border-neutral200  pb-4">
                       {e.name}
                     </div>
                     <div className="text-xl font-light mt-8">{e.details}</div>
