@@ -18,6 +18,16 @@ export default {
         blackshade4: "var(--blackshade4)",
         primarypink: "#ff2a83",
         primaryyellow: "#cde052",
+        neutral900: "#0E0D0F",
+        neutral800: "#121113",
+        neutral700: "#171619",
+        neutral600: "#1e1c20",
+        neutral500: "#211f23",
+        neutral400: "#4d4c4f",
+        neutral300: "#6a696c",
+        neutral200: "#99989a",
+        neutral100: "#bababb",
+        neutral50: "#e9e9e9",
       },
       keyframes: {
         scroll: {

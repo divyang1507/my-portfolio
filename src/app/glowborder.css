@@ -1,0 +1,73 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.glowCard {
+  position: relative;
+}
+
+.glowCard::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border-radius: 24px;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-color: rgb(120, 120, 120);
+}
+
+.glowCard:hover:before {
+  content: "";
+  top: 0;
+  z-index: -1;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border-radius: 24px;
+  background-image: linear-gradient(
+    var(--rotate),
+    rgb(255, 0, 68),
+    rgb(81, 0, 255) 43%,
+    rgb(208, 0, 255)
+  );
+  position: absolute;
+  z-index: -1;
+
+  animation: spin 3s linear infinite;
+}
+
+.glowCard:hover:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(.9);
+  filter: blur(50px);
+  background-image: linear-gradient(
+    var(--rotate),
+    rgba(255, 0, 68, 0.83),
+    rgba(81, 0, 255, 0.83) 43%,
+    rgba(208, 0, 255, 0.83)
+  );
+  opacity: 1;
+  transition: opacity 3s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}

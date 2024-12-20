@@ -1,7 +1,7 @@
 "use client";
 import gsap from "gsap";
 import Image from "next/image";
-import  { useRef } from "react";
+import { useRef } from "react";
 
 const Project = ({ name, type, link, image, tool }) => {
   const cardRefs = useRef();
@@ -76,9 +76,14 @@ const Project = ({ name, type, link, image, tool }) => {
           left: "0%", // Initially center it on the card
           transform: "translate(-50%, -50%)", // Ensure it's centered
         }}></div>
-      <div className={`bg-gradient-to-b  from-[#212129] to-[#111115]  zinc-800 hover:bg-[#2b2b34] zinc-700 p-8 rounded-xl flex-1 border-zinc-400 border-[1px]`}>
+      <div
+        className={`bg-gradient-to-b  from-neutral600 to-neutral800  neutral800 hover:bg-[#2b2b34] neutral700 p-8 rounded-xl flex-1 border-neutral200 border-[1px]`}>
         <div className="w-auto h-auto object-fill overflow-hidden rounded-lg ">
-        <Image src={image} alt='portfolioimage ' className="rounded-lg  grayscale  group-hover:grayscale-0 transition-all duration-500 group-hover:scale-[1.1]"/>
+          <Image
+            src={image}
+            alt="portfolioimage "
+            className="rounded-lg  grayscale  group-hover:grayscale-0 transition-all duration-500 group-hover:scale-[1.1]"
+          />
         </div>
         <div>
           <div className="flex flex-wrap items-center justify-between pt-4 ">

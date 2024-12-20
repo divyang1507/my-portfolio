@@ -43,9 +43,9 @@ const Navbar = () => {
   return (
     <>
       <nav className=" py-6 fixed w-screen backdrop-blur-3xl top-0  z-50 flex items-center justify-between" ref={ref}>
-        <div className=" z-10 w-full mx-4 md:mx-[60px] lg:mx-[120px] justify-between flex items-center">
-          <div className="z-10 text-3xl font-medium" onClick={()=>{setIsOpen(false)}}>kindev</div>
-          <div className="z-10 text-4xl relative cursor-pointer overflow-hidden" onClick={handleinput}>
+        <div className=" z-z-50 w-full mx-4 md:mx-[60px] lg:mx-[120px] justify-between flex items-center">
+          <div className="z-50 text-3xl font-medium" onClick={()=>{setIsOpen(false)}}>kindev</div>
+          <div className="z-50 text-4xl relative cursor-pointer overflow-hidden" onClick={handleinput}>
             <div
               className={`${
                 isOpen
@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`menu flex flex-col justify-center items-center md:items-end w-screen h-screen top-0 clip absolute bg-transparent backdrop-blur-3xl  px-4 md:px-[120px]`}>
+          className={`menu flex flex-col justify-center items-center md:items-end w-screen h-screen top-0 clip absolute bg-black backdrop-blur-3xl  px-4 md:px-[120px] z-40`}>
          
           {navMenu.map((e, id) => {
             return (

@@ -93,12 +93,12 @@ const Works = () => {
     <>
       <div className="mt-40 workpage relative">
         {/* <Marquee marqueeName={"Works"} /> */}
-        <div className="text-4xl mb-8  md:text-5xl lg:text-6xl text-center">
+        <div className="text-4xl mb-8  md:text-5xl lg:text-6xl text-center font-family-nunito">
           {" "}
           Works
         </div>
 
-        <section className="mx-4 md:mx-[120px] ">
+        <section className="mx-4 md:mx-[60px] lg:mx-[120px] ">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-between flex-wrap items-center gap-8">
             {projects.map((e, id) => {
               return (

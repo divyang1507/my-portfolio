@@ -8,7 +8,7 @@ import Faqs from "./components/Faqs";
 import Workwithus from "./components/Workwithus";
 import { useEffect } from "react";
 import LocomotiveScroll from "locomotive-scroll";
-import { Footer } from "./components/Footer";
+import  Footer  from "./components/Footer";
 
 export default function Home() {
   useEffect(() => {

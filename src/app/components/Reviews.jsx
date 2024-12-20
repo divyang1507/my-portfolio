@@ -31,15 +31,15 @@ const Reviews = () => {
   ];
   return (
     <>
-      <h1 className="text-4xl md:text-6xl text-center mt-36 py-24 ">
-       Reviews {/* Some nice words from my past Clients */}
-      </h1>
+      <div className=" mt-36 mb-8 text-4xl md:text-6xl text-center ">
+        Reviews {/* Some nice words from my past Clients */}
+      </div>
       <section className=" mx-4  md:mx-16 lg:mx-[120px] items-stretch grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {reviews.map((e, id) => {
           return (
             <div
               key={id}
-              className="p-8 flex justify-between flex-col border-zinc-400 border-2 rounded-xl bg-gradient-to-b  from-[#212129] to-[#111115]">
+              className="p-8 flex justify-between flex-col border-neutral200 border-2 rounded-xl bg-gradient-to-b  from-neutral600 to-neutral800">
               <div>
                 <div className="flex text-lg">
                   <FaStar />

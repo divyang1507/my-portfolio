@@ -1,8 +1,9 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import _ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all"
 import React, { useRef } from "react";
+
 
 const Workwithus = () => {
   const sectionref = useRef();
@@ -29,18 +30,18 @@ const Workwithus = () => {
         "We value transparency and efficiency. Our clear communication and streamlined processes ensure timely delivery, while our flexible pricing reflects the scope and complexity of your project, delivering great value within your budget.",
     },
   ];
-  gsap.registerPlugin(_ScrollTrigger);
-  useGSAP(() => {
-    gsap.to(heading.current, {
-      scrollTrigger: {
-        trigger: heading.current,
-        pin: true,
-        start: "top center",
-        end: "center top",
-        // markers: true,
-      },
-    });
-  });
+  // gsap.registerPlugin(ScrollTrigger);
+  // useGSAP(() => {
+  //   gsap.to(heading.current, {
+  //     scrollTrigger: {
+  //       trigger: heading.current,
+  //       pin: true,
+  //       start: "top center",
+  //       end: "center top",
+  //       // markers: true,
+  //     },
+  //   });
+  // });
 
   return (
     <>
@@ -51,14 +52,16 @@ const Workwithus = () => {
             Why Work with us
           </div>
         </div>
-        <div className=" md:w-[60%] ">
+        <div className=" md:w-[60%] bg-neutral800 rounded-3xl overflow-hidden">
           {data.map((e, id) => {
             return (
-              <div key={id} className="p-8 sticky top-[15%] md:static bg-[#0a0a0f]">
+              <div
+                key={id}
+                className="p-8 sticky top-[15%] md:static bg-neutral800">
                 <div className="flex flex-col md:flex-row text-4xl pt-10 gap-6 ">
                   <div className="text-6xl">{id + 1}.</div>
                   <div>
-                    <div className="border-b border-zinc-400 pb-4">
+                    <div className="border-b border-neutral200 pb-4">
                       {e.name}
                     </div>
                     <div className="text-xl font-light mt-8">{e.details}</div>

@@ -4,60 +4,50 @@ import Button from "./Button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Spline from "@splinetool/react-spline";
+import { FaGithub, FaDribbble, FaBehance } from "react-icons/fa";
+import Marquee from "./Marquee";
+import HeroAnimation from "./HeroAnimation";
 
 const HeroSection = () => {
   const ref = useRef(null);
   gsap.registerPlugin(useGSAP);
   useGSAP(
     () => {
-      gsap.set(".button  , .text", {
-        y: -150,
-      });
-      gsap.to(".button  , .text", {
+        gsap.to(".button  , .text", {
         y: 0,
         duration: 0.5,
         stagger: 0.3,
         opacity: 1,
-        clipLinkPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       });
     },
     { scope: ref }
   );
   return (
     <>
-      <section className=" relative h-screen lg:h-screen mx-4 md:mx-16 lg:mx-[120px] flex items-end md:justify-start md:items-center">
-        <div className="z-20 relative md:w-1/2 " ref={ref}>
-          <div className="clipLink">
-            <div className="text text-5xl md:text-[4rem] lg:text-7xl text-center md:text-left ">
-              Web Design &{" "}
-            </div>
-          </div>
-          <div className="clipLink ">
-            <div className="text text-5xl md:text-[4rem] lg:text-7xl text-center md:text-left">
-              Development
-            </div>
-          </div>
-          <div className="clipLink">
-            <div className="text pt-2 lg:pt-5 text-[1.5rem] md:text-[2vw] font-extralight text-center md:text-left">
-              Web Desinger, UI/UX Desinger, Frontend Developer & Framer Webflow
-              Expert
-            </div>
-          </div>
-          <div className="clipLink ">
-            <div className="mt-6 lg:mt-12 button flex items-center justify-center md:justify-start md:items-start">
-              <Button button="Contact us" className="" />
-            </div>
+      <section
+        ref={ref}
+        className="bg-neutral900 h-screen flex flex-col items-center justify-center relative overflow-hidden">
+        <div className="heroclip z-10">
+          <div className=" z-10 text -translate-y-[150%] text-7xl md:text-8xl lg:text-9xl flex items-center justify-center  leading-[100%] font-medium text-center text-white">
+            Design &
           </div>
         </div>
-      </section>
-      <section className="mx-4 md:mx-[60px] lg:mx-[120px] mt-14 pt-6 px-2 flex justify-center items-center ">
-        <div className="text-center text-2xl mx-auto w-auto md:w-1/3">
-          Welcome to KinDev, Web Designer & Dev Duo doing Web Development and
-          expert in Webflow Framer and Figma
+        <div className="heroclip z-10">
+          <div className=" z-10 text -translate-y-[150%] text-7xl md:text-8xl lg:text-9xl flex items-center justify-center pb-24 lg:pb-12 leading-[100%] font-medium text-center text-white">
+            Funcionlity
+          </div>
+        </div>
+        <div className="z-10 flex gap-6 text-3xl lg:text-4xl absolute bottom-[40%] md:bottom-8 md:left-[120px]">
+          <FaGithub /> <FaDribbble />
+          <FaBehance />
+        </div>
+        <div className="absolute top-0 w-full h-screen ">
+          <HeroAnimation />
         </div>
       </section>
-      <div className=" absolute top-0 w-full h-screen flex items-center justify-center">
-      <Spline scene="https://prod.spline.design/cL2ltYduglTx-ZKB/scene.splinecode" />
+      <div>
+        <Marquee />
       </div>
     </>
   );
