@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   const navMenu = ["Home", "Contact", "About", "Work"];
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="mx-4 md:mx-16 lg:mx-[120px] mt-32 py-16 ">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="text-3xl">
-          <div>KinDiv</div>
+          <div>Progrowth</div>
           <div className="pt-8 text-5xl">
             Do you want to start <br /> a project together?
           </div>
@@ -20,9 +20,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className='pt-8'>
-        all rights reserved @ KinDev
-      </div>
+      <div className="pt-8">all rights reserved @ Progrowth</div>
     </footer>
   );
 };

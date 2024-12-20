@@ -1,7 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 const Navbar = () => {
@@ -14,7 +14,6 @@ const Navbar = () => {
     () => {
       gsap.set(".link", {
         y: 100,
-        
       });
       tl.current = gsap
         .timeline({ paused: true })
@@ -23,7 +22,13 @@ const Navbar = () => {
           ease: "power4.inOut",
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         })
-        .to(".link", { y: 0, duration: 1, stagger: 0.1, ease: "power4.inOut", delay:-0.75 });
+        .to(".link", {
+          y: 0,
+          duration: 1,
+          stagger: 0.1,
+          ease: "power4.inOut",
+          delay: -0.75,
+        });
     },
     { scope: ref }
   );
@@ -42,10 +47,20 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className=" py-6 fixed w-screen backdrop-blur-3xl top-0  z-50 flex items-center justify-between" ref={ref}>
+      <nav
+        className=" py-6 fixed w-screen backdrop-blur-3xl top-0  z-50 flex items-center justify-between"
+        ref={ref}>
         <div className=" z-z-50 w-full mx-4 md:mx-[60px] lg:mx-[120px] justify-between flex items-center">
-          <div className="z-50 text-3xl font-medium" onClick={()=>{setIsOpen(false)}}>kindev</div>
-          <div className="z-50 text-4xl relative cursor-pointer overflow-hidden" onClick={handleinput}>
+          <div
+            className="z-50 text-3xl font-medium"
+            onClick={() => {
+              setIsOpen(false);
+            }}>
+            Progrowth
+          </div>
+          <div
+            className="z-50 text-4xl relative cursor-pointer overflow-hidden"
+            onClick={handleinput}>
             <div
               className={`${
                 isOpen
@@ -66,10 +81,11 @@ const Navbar = () => {
         </div>
         <div
           className={`menu flex flex-col justify-center items-center md:items-end w-screen h-screen top-0 clip absolute bg-black backdrop-blur-3xl  px-4 md:px-[120px] z-40`}>
-         
           {navMenu.map((e, id) => {
             return (
-              <div className="text-4xl text-center md:text-7xl py-6 clipLink" key={id}>
+              <div
+                className="text-4xl text-center md:text-7xl py-6 clipLink"
+                key={id}>
                 <div className=" link">{e}</div>
               </div>
             );

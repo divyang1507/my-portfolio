@@ -1,19 +1,18 @@
 "use client";
 import { useRef } from "react";
-import Button from "./Button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Spline from "@splinetool/react-spline";
 import { FaGithub, FaDribbble, FaBehance } from "react-icons/fa";
 import Marquee from "./Marquee";
 import HeroAnimation from "./HeroAnimation";
+import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   const ref = useRef(null);
   gsap.registerPlugin(useGSAP);
   useGSAP(
     () => {
-        gsap.to(".button  , .text", {
+      gsap.to(".button  , .text", {
         y: 0,
         duration: 0.5,
         stagger: 0.3,
@@ -38,9 +37,11 @@ const HeroSection = () => {
             Funcionlity
           </div>
         </div>
+
         <div className="z-10 flex gap-6 text-3xl lg:text-4xl absolute bottom-[40%] md:bottom-8 md:left-[120px]">
-          <FaGithub /> <FaDribbble />
-          <FaBehance />
+          <FaGithub className="hover:text-neutral-400" />{" "}
+          <FaDribbble className="hover:text-neutral-400" />
+          <FaBehance className="hover:text-neutral-400" />
         </div>
         <div className="absolute top-0 w-full h-screen ">
           <HeroAnimation />

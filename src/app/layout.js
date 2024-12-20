@@ -2,18 +2,16 @@ import { Nunito, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const OpenSans = Open_Sans({
-  weight: ["300", "400","500", "600","700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 const nunito = Nunito({
-  weight: ["200", "300", "400","500", "600","700", "800","900" ],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
-
-
 export const metadata = {
-  title: "Kindev",
+  title: "Progrowth",
   description: "UI/UX Designer | Frontend Developer",
 };
 

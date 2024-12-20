@@ -1,8 +1,46 @@
+'use client';
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { FaRegStar, FaStarHalfStroke, FaStar } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
+import "../../app/show.css";
 const Reviews = () => {
+  const cardRefs = useRef();
+  const glowRef = useRef();
+
+  const handleMouseMove = (e) => {
+    const card = cardRefs.current;
+    if (!card) return; // Safety check
+
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left; // Get mouse X position relative to card
+    const y = e.clientY - rect.top; // Get mouse Y position relative to card
+
+    // Immediately move the glow element to the cursor position
+    if (glowRef.current) {
+      const glow = glowRef.current;
+      gsap.set(glow, {
+        opacity: 1, // Make sure glow is visible
+        x: x, // Position glow directly at the cursor tip
+        y: y, // Position glow directly at the cursor tip
+      });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const card = cardRefs.current;
+    if (!card) return; // Safety check
+
+    // Fade out the glow and reset position on mouse leave
+    if (glowRef.current) {
+      gsap.to(glowRef.current, {
+        opacity: 0,
+        ease: "power2.out",
+        duration: 0.3,
+      });
+    }
+  };
+
   const reviews = [
     {
       stars: 4,
@@ -34,12 +72,15 @@ const Reviews = () => {
       <div className=" mt-36 mb-8 text-4xl md:text-6xl text-center ">
         Reviews {/* Some nice words from my past Clients */}
       </div>
-      <section className=" mx-4  md:mx-16 lg:mx-[120px] items-stretch grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <section
+        id="cards"
+        className=" mx-4  md:mx-16 lg:mx-[120px] items-stretch grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {reviews.map((e, id) => {
           return (
             <div
+              ref={glowRef}
               key={id}
-              className="p-8 flex justify-between flex-col border-neutral200 border-2 rounded-xl bg-gradient-to-b  from-neutral600 to-neutral800">
+              className="card p-8 flex justify-between flex-col border-neutral200 border-2 rounded-xl bg-gradient-to-b  from-neutral600 to-neutral800">
               <div>
                 <div className="flex text-lg">
                   <FaStar />
