@@ -8,13 +8,13 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between">
         <div className="text-3xl">
           <div>Progrowth</div>
-          <div className="pt-8 text-5xl">
+          <div className="pt-8 text-3xl md:text-5xl">
             Do you want to start <br /> a project together?
           </div>
         </div>
         <div>
           {navMenu.map((item, index) => (
-            <div className="text-3xl text-center py-6 clipLink" key={index}>
+            <div className="md:text-3xl text-lg text-center py-6 clipLink" key={index}>
               <div className="link">{item}</div>
             </div>
           ))}

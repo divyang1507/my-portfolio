@@ -45,9 +45,9 @@ const Workwithus = () => {
 
   return (
     <>
-      <div className=" relative mt-36 mb-8 mx-4 md:mx-16 lg:mx-[120px] flex gap-16 flex-col md:flex-row">
+      <div className=" relative mt-36 mb-8 mx-4 md:mx-16 lg:mx-[120px] flex gap-8 lg:gap-16 flex-col md:flex-row">
         <div className=" sticky top-[10%] md:top-[25%] h-full ">
-          <div className="text-4xl md:w-3/4 md:text-6xl lg:text-7xl">
+          <div className="text-4xl lg:w-3/4 md:text-6xl lg:text-7xl">
             Why Work with us
           </div>
         </div>

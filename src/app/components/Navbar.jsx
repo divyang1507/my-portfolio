@@ -2,6 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
+import { FaGithub, FaBehance, FaDribbble } from "react-icons/fa6";
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 const Navbar = () => {
@@ -86,10 +87,16 @@ const Navbar = () => {
               <div
                 className="text-4xl text-center md:text-7xl py-6 clipLink"
                 key={id}>
-                <div className=" link">{e}</div>
+                <div className=" link ">{e}</div>
               </div>
             );
           })}
+          <div className=" flex gap-6 text-3xl lg:text-4xl absolute bottom-[20%] md:bottom-12 md:left-[120px]">
+            <FaGithub className="hover:text-neutral-400" />{" "}
+            <FaDribbble className="hover:text-neutral-400" />
+            <FaBehance className="hover:text-neutral-400" />
+          </div>
+        
         </div>
       </nav>
     </>
