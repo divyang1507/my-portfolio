@@ -6,6 +6,7 @@ import { FaGithub, FaDribbble, FaBehance } from "react-icons/fa";
 import Marquee from "./Marquee";
 import HeroAnimation from "./HeroAnimation";
 import HeroSlider from "./HeroSlider";
+import Link from "next/link";
 
 const HeroSection = () => {
   const ref = useRef(null);
@@ -39,9 +40,15 @@ const HeroSection = () => {
         </div>
 
         <div className="z-10 flex gap-6 text-3xl lg:text-4xl absolute bottom-[40%] md:bottom-8 md:left-[120px]">
-          <FaGithub className="hover:text-neutral-400" />{" "}
-          <FaDribbble className="hover:text-neutral-400" />
-          <FaBehance className="hover:text-neutral-400" />
+          <Link href={"https://github.com/divyang1507"} passHref>
+            <FaGithub className="hover:text-neutral-400" />{" "}
+          </Link>
+          <Link href={"https://dribbble.com/dev3434"}>
+            <FaDribbble className="hover:text-neutral-400" />
+          </Link>
+          <Link href={"https://www.behance.net/divyangprajapa"}>
+            <FaBehance className="hover:text-neutral-400" />
+          </Link>
         </div>
         <div className="absolute top-0 w-full h-screen ">
           <HeroAnimation />
